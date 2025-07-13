@@ -1,9 +1,9 @@
-import { Resend } from "resend"
-
 "use server"
 
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+import { Resend } from "resend"
+
+const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY)
 
 export async function sendContactEmail(formData: FormData) {
     await new Promise((resolve) => setTimeout(resolve, 1000))
