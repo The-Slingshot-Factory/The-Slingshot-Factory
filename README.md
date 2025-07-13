@@ -4,7 +4,7 @@ Welcome to The Slingshot Factory! We build software systems that act as a digita
 
 ## Services
 
-- Consulting
+- Technological Consulting
 - Software Systems Development
 
 ## Contact Us
