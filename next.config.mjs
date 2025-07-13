@@ -1,8 +1,5 @@
-// next.config.js
-const withNetlify = (await import('@netlify/next')).withNetlify;
-
 /** @type {import('next').NextConfig} */
-const nextConfig = withNetlify({
+const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -12,6 +9,6 @@ const nextConfig = withNetlify({
   images: {
     unoptimized: true,
   },
-});
+}
 
-export default nextConfig;
+export default nextConfig
