@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ContactForm } from "@/components/contact-form"
+import Image from "next/image"
 
 export default function HomePage() {
   return (
@@ -18,7 +19,8 @@ export default function HomePage() {
       <nav className="relative z-50 w-full">
         <div className="container mx-auto px-6 py-8">
           <div className="flex items-center justify-between">
-            <Link href="/" className="text-lg font-medium tracking-wide relative group">
+            <Link href="/" className="text-lg font-medium tracking-wide relative group flex items-center">
+              <Image src="/logo.png" alt="Logo" width={32} height={32} className="mr-2 rounded-md" />
               <span className="relative z-10">The Slingshot Factory</span>
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/10 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
             </Link>
