@@ -1,11 +1,74 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ContactForm } from "@/components/contact-form"
-import Image from "next/image"
 
 export default function HomePage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "The Slingshot Factory",
+    "alternateName": "Slingshot Factory",
+    "url": "https://theslingshotfactory.com",
+    "logo": "https://theslingshotfactory.com/logo.png",
+    "description": "We build software systems that act as a digital catapult, boosting your personal or business efficiency and helping you achieve more with less effort.",
+    "foundingDate": "2024",
+    "industry": "Software Development",
+    "legalName": "The Slingshot Factory, LLC",
+    "serviceArea": {
+      "@type": "GeoRadius",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": "39.8283",
+        "longitude": "-98.5795"
+      },
+      "geoRadius": "global"
+    },
+    "areaServed": "Worldwide",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Software Development Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Custom Software Development",
+            "description": "Building tailored software solutions for businesses"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Business Automation",
+            "description": "Automating business processes to increase efficiency"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Digital Transformation",
+            "description": "Helping businesses transition to digital solutions"
+          }
+        }
+      ]
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/the-slingshot-factory",
+      "https://x.com/slingshotfactor"
+    ]
+  }
+
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black"></div>
 
@@ -19,8 +82,14 @@ export default function HomePage() {
       <nav className="relative z-50 w-full">
         <div className="container mx-auto px-6 py-8">
           <div className="flex items-center justify-between">
-            <Link href="/" className="text-lg font-medium tracking-wide relative group flex items-center">
-              <Image src="/logo.png" alt="Logo" width={32} height={32} className="mr-2 rounded-md" />
+            <Link href="/" className="flex items-center space-x-3 text-lg font-medium tracking-wide relative group">
+              <Image
+                src="/logo.png"
+                alt="The Slingshot Factory Logo"
+                width={32}
+                height={32}
+                className="rounded-lg"
+              />
               <span className="relative z-10">The Slingshot Factory</span>
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/10 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
             </Link>
