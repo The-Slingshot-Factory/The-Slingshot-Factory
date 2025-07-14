@@ -57,7 +57,7 @@ export default function HomePage() {
 
             <div className="relative mb-16">
               <p className="text-xl md:text-2xl text-gray-400 font-light leading-relaxed max-w-4xl mx-auto relative z-10">
-                We build software systems that acts as a digital catapult—boosting your personal or business efficiency and
+                We build software systems that act as a digital catapult, boosting your personal or business efficiency and
                 helping you achieve more with less effort.
               </p>
               {/* Subtle glow behind text */}
