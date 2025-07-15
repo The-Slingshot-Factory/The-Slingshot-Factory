@@ -64,14 +64,14 @@ export function ContactForm() {
               disabled={isPending}
               className="relative w-full bg-transparent border border-gray-600 text-gray-300 hover:text-white py-3 text-lg tracking-wide transition-all duration-300 group-hover:border-purple-400/50 group-hover:shadow-[0_0_30px_rgba(147,51,234,0.3)] overflow-hidden disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <span className="relative z-10">{isPending ? "SENDING..." : "SEND MESSAGE"}</span>
+              <span className="relative z-10 pointer-events-none">{isPending ? "SENDING..." : "SEND MESSAGE"}</span>
               {/* Animated background */}
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/0 via-purple-600/20 to-purple-600/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/0 via-purple-600/20 to-purple-600/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 pointer-events-none"></div>
               {/* Border glow */}
-              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-purple-500/0 via-purple-500/50 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-purple-500/0 via-purple-500/50 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm pointer-events-none"></div>
             </Button>
             {/* Outer glow */}
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/20 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl scale-110"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/20 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl scale-110 pointer-events-none"></div>
           </div>
         </form>
 
